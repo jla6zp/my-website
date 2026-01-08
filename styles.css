@@ -29,10 +29,11 @@ html, body
     font-size: 54px;
     font-weight: bold;
     color: white;
-    background-color: rgba(40,40,40,0.5);
-    bottom: -5%;
+    background-color: rgba(40,40,40,0.3);
+    bottom: 0%;
     z-index: 2;
     cursor:pointer;
+    text-decoration: none;
 }
 
 .About-Display

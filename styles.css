@@ -31,6 +31,7 @@ html, body
     color: white;
     background-color: rgba(40,40,40,0.5);
     bottom: -5%;
+    z-index: 2;
 }
 
 .About-Display
@@ -40,13 +41,32 @@ html, body
     width: inherit;
     display: flex;
     opacity: 0;
-    transition: opacity 300ms ease;
+    transform: translateX(-100%);
+    transition: transform 500ms ease, opacity 700ms ease;
     pointer-events: none;
-    z-index: 2;
+}
+
+.Photos-Display
+{
+    background-image:  url("Images/Iceland_31.png");
+    background-size: cover;
+    width: inherit;
+    display: flex;
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: transform 500ms ease, opacity 700ms ease;
+    pointer-events: none;
 }
 
 .Home-Title-Font:hover + .About-Display
 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.Home-Title-Font:hover + .Photos-Display
+{
+    transform: translateX(0);
     opacity: 1;
 }
 

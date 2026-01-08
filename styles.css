@@ -33,6 +33,23 @@ html, body
     bottom: -5%;
 }
 
+.About-Display
+{
+    background-image:  url("Images/Iceland_24.jpg");
+    background-size: cover;
+    width: inherit;
+    display: flex;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.Home-Title-Font:hover + .About-Display
+{
+    opacity: 1;
+}
+
 .Panel
 {
     width: 33.33vw;

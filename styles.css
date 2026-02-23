@@ -1,10 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 html, body
 {
     min-height: 100vh;
     min-width: 100vw;
     margin: 0;
-    padding: 0;
 }
 
 .Home-Background
@@ -17,77 +16,116 @@ html, body
     overflow: hidden;
 }
 
-.Home-Title-Font
+header
 {
-    height: 10vh;
-    line-height: 10vh;
-    width: inherit;
-    text-align: center;
     position: absolute;
-    vertical-align: middle;
-    font-family: f, sans-serif;
-    font-size: 54px;
-    font-weight: bold;
+    height: 20vh;              /* 10% of the viewport height */
+    width: 100vw;
+    display: flex;             /* Enable Flexbox */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    color: #b0c1df;
+    text-align: center;
+    opacity: 40%;
+}
+
+header h1,
+header p
+{
+    font-family: "Berkshire Swash", serif;
+    margin: 0;
+}
+
+header h1
+{
+    font-size: 3rem;
+}
+
+header p
+{
+    font-size: 1rem;
+}
+
+.panel-layout
+{
+    display: flex;
+    height: 100vh;
+}
+
+.panel
+{
+    display: flex;
+    height: inherit;
+    width: 33.33vw;
+}
+
+.centered
+{
+    justify-content: center;
+}
+
+.menu-text
+{
+    font-family: "Google Sans", sans-serif;
+    font-size: clamp(1.5rem, 4vw, 3rem);
     color: white;
-    background-color: rgba(40,40,40,0.3);
-    bottom: 0%;
-    z-index: 2;
-    cursor:pointer;
     text-decoration: none;
 }
 
-.About-Display
+.horizontal-line
 {
-    background-image:  url("Images/Iceland_24.jpg");
-    background-size: cover;
-    width: inherit;
+    width: 50px;
+    height: 5px;
+    background-color: white;
+}
+
+.projects-bar
+{
     display: flex;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: transform 500ms ease, opacity 700ms ease;
-    pointer-events: none;
+    margin-top: auto;
+    margin-bottom: 65px;
+    margin-right: auto;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
 }
 
-.Photos-Display
+.photos-bar
 {
-    background-image:  url("Images/Iceland_31.png");
-    background-size: cover;
-    width: inherit;
     display: flex;
-    opacity: 0;
-    transform: translateX(+100%);
-    transition: transform 500ms ease, opacity 700ms ease;
-    pointer-events: none;
+    margin-top: auto;
+    margin-bottom: 65px;
+    margin-left: auto;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
 }
 
-.Home-Title-Font:hover + .About-Display
+.vertical-container
 {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.Home-Title-Font:hover + .Photos-Display
-{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.Panel
-{
-    width: 33.33vw;
     display: flex;
+    height: 50px;
+    width: 50px;
     justify-content: center;
-    border-left: 1px solid rgba(255, 255, 255, .2);
-    opacity: 1;
 }
 
-.Panel-Page
+.vertical-line
 {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 50px;
+    width: 5px;
+    background-color: white;
+}
+
+.about-area
+{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow: hidden;
+    flex-direction: column;
+    margin-top: auto;
+    align-items: center;
+    gap: 15px;
+}
+
+.pointer
+{
+    cursor: pointer;
 }

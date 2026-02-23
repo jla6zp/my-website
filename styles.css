@@ -57,6 +57,13 @@ header p
     display: flex;
     height: inherit;
     width: 33.33vw;
+    position: relative;
+    z-index: 1;
+}
+
+.panel:hover
+{
+    z-index: 7;
 }
 
 .centered
@@ -93,6 +100,7 @@ header p
     align-items: center;
     gap: 15px;
     cursor: pointer;
+    z-index: 7;
 }
 
 .photos-bar
@@ -104,6 +112,7 @@ header p
     align-items: center;
     gap: 15px;
     cursor: pointer;
+    z-index: 7;
 }
 
 .photos-bar:hover .horizontal-line,
@@ -138,6 +147,7 @@ header p
     align-items: center;
     width: fit-content;
     height: fit-content;
+    z-index: 7;
 
     pointer-events: none; /*This keeps the hover affect from working in the entire suare of its children*/
 }
@@ -166,13 +176,46 @@ header p
     transition: transform 0.3s ease;
 }
 
-.photo-overlay {
+.backdrop-overlay {
     position: fixed;
     inset: 0;                  /* top:0 right:0 bottom:0 left:0 */
     background: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
     pointer-events: none;      /* prevents blocking hover */
+    z-index: 5;
+}
+
+.image-overlay
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    width: 33.33vw;
+    height: 100vh;
     z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+.photos-bar-overlay
+{
+    background-image: url("Images/Iceland_35.png");
+    transform: translateX(100%);
+    z-index: 6;
+}
+
+.projects-bar-overlay
+{
+    background-image: url("Images/Iceland_31.png");
+    transform: translateX(-100%);
+    z-index: 6;
+}
+
+.about-area-overlay
+{
+    background-image: url("Images/Iceland_24.jpg");
+    transform: translateY(100%);
+    z-index: 6;
 }
 
 .left-backdrop
@@ -190,18 +233,14 @@ header p
     transform: translateY(100%);  /* start fully off screen */
 }
 
-.projects-bar:hover,
-.photos-bar:hover,
-.about-area:hover
-{
-    z-index: 2;
-}
-
-.projects-bar:hover ~ .photo-overlay,
-.photos-bar:hover ~ .photo-overlay {
+.projects-bar:hover ~ .backdrop-overlay,
+.photos-bar:hover ~ .backdrop-overlay,
+.projects-bar:hover ~ .projects-bar-overlay,
+.photos-bar:hover ~ .photos-bar-overlay {
     transform: translateX(0);
 }
 
-.about-area:hover ~ .photo-overlay {
+.about-area:hover ~ .backdrop-overlay,
+.about-area:hover ~ .about-area-overlay {
     transform: translateY(0);
 }

@@ -68,8 +68,11 @@ header p
 {
     font-family: "Google Sans", sans-serif;
     font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: bold;
     color: white;
     text-decoration: none;
+    letter-spacing: .2em;
+    opacity: 80%;
 }
 
 .horizontal-line
@@ -78,6 +81,7 @@ header p
     height: 5px;
     background-color: white;
     transition: width 0.3s ease;
+    opacity: 80%;
 }
 
 .projects-bar
@@ -123,6 +127,7 @@ header p
     width: 5px;
     background-color: white;
     transition: height 0.3s ease;
+    opacity: 80%;
 }
 
 .about-area
@@ -148,12 +153,12 @@ header p
 
 .about-area:hover .sibling-hover
 {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
 }
 
 .about-area:hover .vertical-line
 {
-    height: 80px;
+    height: 70px;
 }
 
 .sibling-hover

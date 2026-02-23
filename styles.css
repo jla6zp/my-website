@@ -199,14 +199,14 @@ header p
 
 .photos-bar-overlay
 {
-    background-image: url("Images/Iceland_35.png");
+    background-image: url("Images/Iceland_31.png");
     transform: translateX(100%);
     z-index: 6;
 }
 
 .projects-bar-overlay
 {
-    background-image: url("Images/Iceland_31.png");
+    background-image: url("Images/Iceland_35.png");
     transform: translateX(-100%);
     z-index: 6;
 }

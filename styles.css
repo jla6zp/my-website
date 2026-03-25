@@ -206,9 +206,16 @@ header p
 
 .projects-bar-overlay
 {
-    background-image: url("Images/Iceland_35.png");
+    /* background-image: url("Images/Iceland_35.png"); */
     transform: translateX(-100%);
     z-index: 6;
+}
+
+.waterSim
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* key: crops instead of stretching */
 }
 
 .about-area-overlay
@@ -221,6 +228,9 @@ header p
 .left-backdrop
 {
     transform: translateX(-100%);
+    overflow: hidden;
+    width: 33.33vw;
+    height: 100vh;
 }
 
 .right-backdrop

@@ -213,7 +213,8 @@ header p
 
 .waterSim
 {
-    width: 100%;
+    overflow: hidden;
+    width: 33.33vw;
     height: 100%;
     object-fit: cover;   /* key: crops instead of stretching */
 }
@@ -228,8 +229,8 @@ header p
 .left-backdrop
 {
     transform: translateX(-100%);
-    overflow: hidden;
-    width: 33.33vw;
+    /* overflow: hidden;
+    width: 33.33vw; */
     height: 100vh;
 }
 

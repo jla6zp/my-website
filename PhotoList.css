@@ -28,7 +28,7 @@ html, body
 
 .ContactWrapper
 {
-    position: relative;
+    position: absolute;
     top: 50px;
     display: inline-flex; /*Inline-flex online as wide and tall as the children*/
     justify-content: flex-start;
@@ -50,4 +50,39 @@ html, body
     font-family: "Google Sans", sans-serif;
     font-size: 20px;
     color:#bee4fb;
+}
+
+.MenuWrapper
+{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    display: inline-flex; /*Inline-flex online as wide and tall as the children*/
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.MenuLineWrapper
+{
+    position: relative;
+    display: inline-flex; /*Inline-flex online as wide and tall as the children*/
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: flex-start; /* Keeps them at the top */
+    gap: 2px;
+}
+.MenuLine
+{
+    height: 2px;
+    width: 30px;
+    background-color: #bee4fb;
+}
+
+.MenuText
+{
+   font-family: "Google Sans", sans-serif;
+    font-size: 20px;
+    color:#bee4fb; 
 }

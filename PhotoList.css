@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 html, body
 {
     min-height: 100vh;
@@ -22,4 +23,30 @@ html, body
     width: 200px;
     bottom: -25px;
     filter: brightness(0) saturate(100%) invert(91%) sepia(58%) saturate(4121%) hue-rotate(172deg) brightness(106%) contrast(97%);
+}
+
+.ContactWrapper
+{
+    position: relative;
+    top: 50px;
+    display: inline-flex; /*Inline-flex online as wide and tall as the children*/
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ContactLine
+{
+    height: 2px;
+    width: 30px;
+    background-color: #bee4fb;
+}
+
+.ContactText
+{
+    font-family: "Google Sans", sans-serif;
+    font-size: 20px;
+    color:#bee4fb;
 }

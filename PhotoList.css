@@ -14,3 +14,12 @@ html, body
     background-position: center;
     overflow: hidden;
 }
+
+.CornerLogo
+{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: -25px;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(58%) saturate(4121%) hue-rotate(172deg) brightness(106%) contrast(97%);
+}

@@ -82,7 +82,19 @@ html, body
 
 .MenuText
 {
-   font-family: "Google Sans", sans-serif;
+    font-family: "Google Sans", sans-serif;
     font-size: 20px;
+    color:#bee4fb; 
+}
+
+.TempCenterText
+{
+    position: absolute; /* or fixed, to center relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Google Sans", sans-serif;
+    font-size: 100px;
+    font-weight: bold;
     color:#bee4fb; 
 }

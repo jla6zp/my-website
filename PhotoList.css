@@ -1,0 +1,16 @@
+html, body
+{
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+}
+
+.PhotoList-Background
+{
+    background-color: rgb(111, 143, 173);
+    background-image: url("Images/photosBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}

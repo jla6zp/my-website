@@ -107,9 +107,8 @@ html, body
 }
 
 .GalleryImage {
-    /* width: 1; */
     height: 25vh;
-    width: 20vw;
+    width: 32vh;
     object-fit: cover;
 }
 

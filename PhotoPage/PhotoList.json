@@ -394,6 +394,132 @@
       
 
       "tags": ["Indiana", "Dunes", "National Park","Snow", "Chicago", "Indiana Dunes National Park", "Lake Michigan", "Landscape Ratio"]
+    },
+    {
+      "id": "IndianaDunes-002",
+      "title": "Indian Dunes",
+      "description": "Snowy Indiana Dunes",
+      "alt": "Snowy Indiana Dunes",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/IndianaDunes-002_500.png",
+          "width": 500,
+          "height": 375
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/IndianaDunes-002_1000.png",
+          "width": 1000,
+          "height": 750
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/IndianaDunes-002_2000.png",
+          "width": 2000,
+          "height": 1500
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/IndianaDunes-002_4000.png",
+          "width": 4000,
+          "height": 3000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/IndianaDunes-002_6000.png",
+          "width": 6000,
+          "height": 4000
+        }
+      },
+
+      "createdAt": "2025-02-18",
+      "location": "Indiana Dunes National Park, United States",
+      "latitude": "41.64885N",
+      "longitude": "87.11178W",
+      
+
+      "tags": ["Indiana", "Dunes", "National Park","Snow", "Indiana Dunes National Park", "Lake Michigan", "Landscape Ratio"]
+    },
+    {
+      "id": "HockingHills-001",
+      "title": "Hocking Hills Cave Bridge",
+      "description": "Scenic views of Hocking Hills from Old Man's cave overlooking a snowy bridge",
+      "alt": "Old Man's Cave Hocking Hills",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/HockingHills-001_500.png",
+          "width": 375,
+          "height": 500
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/HockingHills-001_1000.png",
+          "width": 750,
+          "height": 1000
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/HockingHills-001_2000.png",
+          "width": 1500,
+          "height": 2000
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/HockingHills-001_4000.png",
+          "width": 3000,
+          "height": 4000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/HockingHills-001_6000.png",
+          "width": 4000,
+          "height": 6000
+        }
+      },
+
+      "createdAt": "2025-02-21",
+      "location": "Hocking Hills, United States",
+      "latitude": "39.43282N",
+      "longitude": "82.54276W",
+      
+
+      "tags": ["Hocking Hills", "Cave", "Bridge", "Snow", "Landscape Ratio"]
+    },
+    {
+      "id": "NRGBridge-001",
+      "title": "New River Gorge Bridge Night",
+      "description": "New River Gorge Bridge at night",
+      "alt": "New River Gorge Bridge at night",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/NRGBridge-001_500.png",
+          "width": 500,
+          "height": 375
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/NRGBridge-001_1000.png",
+          "width": 1000,
+          "height": 750
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/NRGBridge-001_2000.png",
+          "width": 2000,
+          "height": 1500
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/NRGBridge-001_4000.png",
+          "width": 4000,
+          "height": 3000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/NRGBridge-001_6000.png",
+          "width": 6000,
+          "height": 4000
+        }
+      },
+
+      "createdAt": "2025-02-21",
+      "location": "New River Gorge Bridge, United States",
+      "latitude": "38.06990N",
+      "longitude": "81.07854W",
+      
+
+      "tags": ["New River Gorge", "Bridge", "Night", "New River Gorge Bridge","Landscape Ratio"]
     }
   ]
 }

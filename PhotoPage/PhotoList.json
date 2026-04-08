@@ -1,7 +1,273 @@
-[
-    "photo1.jpg",
-    "photo2.jpg",
-    "photo3.jpg",
-    "photo4.jpg",
-    "photo5.jpg"
-]
+{
+  "photos": [
+    {
+      "id": "Iceland-001",
+      "title": "Blue Ice Cave",
+      "description": "A cave of volcanic ash frozen together with glacial ice, creating a surreal blue glow.",
+      "alt": "Blue ice cave with surreal blue glow",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Iceland-001_504.png",
+          "width": 504,
+          "height": 378
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Iceland-001_1008.png",
+          "width": 1008,
+          "height": 756
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Iceland-001_2016.png",
+          "width": 2016,
+          "height": 1512
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Iceland-001_4032.png",
+          "width": 4032,
+          "height": 3024
+        }
+      },
+
+      "createdAt": "2024-02-24",
+      "location": "Vatnajokull, Iceland",
+      "latitude": "63.96934N",
+      "longitude": "16.80758W",
+      
+
+      "tags": ["Iceland", "Ice Cave", "Ash", "Glacier", "Blue Glow", "Landscape Ratio"]
+    },
+    {
+      "id": "Iceland-002",
+      "title": "Ice Cave Silhouette",
+      "description": "A cave of volcanic ash frozen together with glacial ice, creating a surreal blue glow around a person's silhouette.",
+      "alt": "Blue ice cave with surreal blue glow around a silhouette",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Iceland-002_504.png",
+          "width": 378,
+          "height": 504
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Iceland-002_1008.png",
+          "width": 756,
+          "height": 1008
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Iceland-002_2016.png",
+          "width": 1512,
+          "height": 2016
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Iceland-002_4032.png",
+          "width": 3024,
+          "height": 4032
+        }
+      },
+
+      "createdAt": "2024-02-24",
+      "location": "Vatnajokull, Iceland",
+      "latitude": "63.96934N",
+      "longitude": "16.80758W",
+      
+
+      "tags": ["Iceland", "Ice Cave", "Ash", "Glacier", "Blue Glow", "Person", "Portrait", "Silhouette", "Portrait Ratio"]
+    },
+    {
+      "id": "Iceland-003",
+      "title": "Icelandic Glacier",
+      "description": "A field of spiky glaciers with a glacial guide leading the way",
+      "alt": "Icelandic glacier with a glacial guide",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Iceland-003_504.png",
+          "width": 504,
+          "height": 378
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Iceland-003_1008.png",
+          "width": 1008,
+          "height": 756
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Iceland-003_2016.png",
+          "width": 2016,
+          "height": 1512
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Iceland-003_4032.png",
+          "width": 4032,
+          "height": 3024
+        }
+      },
+
+      "createdAt": "2024-02-24",
+      "location": "Vatnajokull, Iceland",
+      "latitude": "63.96934N",
+      "longitude": "16.80758W",
+      
+
+      "tags": ["Iceland", "Icelandic Glacier","Glacier", "Person", "Guide", "Hiker", "Portrait", "Portrait Ratio"]
+    },
+    {
+      "id": "Iceland-004",
+      "title": "Diamond Beach",
+      "description": "A black sand beach dotted with tiny pieces of ice glistening like diamonds in the sun",
+      "alt": "Black sand beach with small shiny pieces of ice",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Iceland-004_504.png",
+          "width": 378,
+          "height": 504
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Iceland-004_1008.png",
+          "width": 756,
+          "height": 1008
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Iceland-004_2016.png",
+          "width": 1512,
+          "height": 2016
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Iceland-004_4032.png",
+          "width": 3024,
+          "height": 4032
+        }
+      },
+
+      "createdAt": "2024-02-24",
+      "location": "Diamond Beach, Iceland",
+      "latitude": "64.04359N",
+      "longitude": "16.17495W",
+      
+
+      "tags": ["Iceland", "Diamond Beach", "Black Sand", "Ice", "Shiny", "Sunlight", "Diamond", "Portrait Ratio"]
+    },
+    {
+      "id": "Iceland-005",
+      "title": "Mirror Mountain",
+      "description": "A towering mountain reflected perfectly in a mirror of water",
+      "alt": "Mirror Mountain reflected in a lake",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Iceland-005_504.png",
+          "width": 504,
+          "height": 378
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Iceland-005_1008.png",
+          "width": 1008,
+          "height": 756
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Iceland-005_2016.png",
+          "width": 2016,
+          "height": 1512
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Iceland-005_4032.png",
+          "width": 4032,
+          "height": 3024
+        }
+      },
+
+      "createdAt": "2024-02-24",
+      "location": "Vestrahorn, Iceland",
+      "latitude": "64.25560N",
+      "longitude": "14.98126W",
+      
+
+      "tags": ["Iceland", "Mirror Mountain", "Mountain", "Water", "Reflection", "Landscape Ratio"]
+    },
+    {
+      "id": "Scotland-001",
+      "title": "Scottish Mountain Pass",
+      "description": "Two towering Scottish mountains with light shining brightly through the middle",
+      "alt": "Two towering Scottish mountains",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Scotland-001_504.png",
+          "width": 504,
+          "height": 378
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Scotland-001_1008.png",
+          "width": 1008,
+          "height": 756
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Scotland-001_2016.png",
+          "width": 2016,
+          "height": 1512
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Scotland-001_4032.png",
+          "width": 4032,
+          "height": 3024
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/Scotland-001_5712.png",
+          "width": 5712,
+          "height": 4284
+        }
+      },
+
+      "createdAt": "2025-03-24",
+      "location": "Glencoe, Scotland",
+      "latitude": "56.66588N",
+      "longitude": "4.98313W",
+      
+
+      "tags": ["Scotland", "Mountain", "Highlands", "Landscape Ratio"]
+    },
+    {
+      "id": "Scotland-002",
+      "title": "Scottish Mountain Pass Filtered",
+      "description": "Two towering Scottish mountains with light shining brightly through the middle",
+      "alt": "Two towering Scottish mountains",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Scotland-002_504.png",
+          "width": 504,
+          "height": 378
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Scotland-002_1008.png",
+          "width": 1008,
+          "height": 756
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Scotland-002_2016.png",
+          "width": 2016,
+          "height": 1512
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Scotland-002_4032.png",
+          "width": 4032,
+          "height": 3024
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/Scotland-002_5712.png",
+          "width": 5712,
+          "height": 4284
+        }
+      },
+
+      "createdAt": "2025-03-24",
+      "location": "Glencoe, Scotland",
+      "latitude": "56.66588N",
+      "longitude": "4.98313W",
+      
+
+      "tags": ["Scotland", "Mountain", "Highlands", "Landscape Ratio"]
+    }
+  ]
+}

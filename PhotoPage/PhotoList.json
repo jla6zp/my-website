@@ -268,6 +268,132 @@
       
 
       "tags": ["Scotland", "Mountain", "Highlands", "Landscape Ratio"]
+    },
+    {
+      "id": "Scotland-003",
+      "title": "Scottish Castle",
+      "description": "A scottish castle on top of a hill with a tree with pink petals leaning into view",
+      "alt": "A Scottish castle",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Scotland-003_500.png",
+          "width": 500,
+          "height": 375
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Scotland-003_1000.png",
+          "width": 1000,
+          "height": 750
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Scotland-003_2000.png",
+          "width": 2000,
+          "height": 1500
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Scotland-003_4000.png",
+          "width": 4000,
+          "height": 3000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/Scotland-003_6000.png",
+          "width": 6000,
+          "height": 4000
+        }
+      },
+
+      "createdAt": "2025-03-28",
+      "location": "Edinburgh, Scotland",
+      "latitude": "55.95009N",
+      "longitude": "3.20305W",
+      
+
+      "tags": ["Scotland", "Ediburgh", "Castle","Fountain", "Landscape Ratio"]
+    },
+    {
+      "id": "Scotland-004",
+      "title": "Scottish Castle with Fountain",
+      "description": "A beautiful fountain with a large castle sitting atop a small mountain in the background",
+      "alt": "A fountain with a Scottish castle in the background",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/Scotland-004_500.png",
+          "width": 500,
+          "height": 375
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/Scotland-004_1000.png",
+          "width": 1000,
+          "height": 750
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/Scotland-004_2000.png",
+          "width": 2000,
+          "height": 1500
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/Scotland-004_4000.png",
+          "width": 4000,
+          "height": 3000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/Scotland-004_6000.png",
+          "width": 6000,
+          "height": 4000
+        }
+      },
+
+      "createdAt": "2025-03-28",
+      "location": "Edinburgh, Scotland",
+      "latitude": "55.95009N",
+      "longitude": "3.20305W",
+      
+
+      "tags": ["Scotland", "Ediburgh", "Castle","Fountain", "Landscape Ratio"]
+    },
+    {
+      "id": "IndianaDunes-001",
+      "title": "Indian Dunes with Chicago",
+      "description": "Snowy Indiana Dunes with the Chicago skyline across the frozen lake",
+      "alt": "Snowy Indiana Dunes with the Chicago skyline",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/IndianaDunes-001_500.png",
+          "width": 500,
+          "height": 375
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/IndianaDunes-001_1000.png",
+          "width": 1000,
+          "height": 750
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/IndianaDunes-001_2000.png",
+          "width": 2000,
+          "height": 1500
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/IndianaDunes-001_4000.png",
+          "width": 4000,
+          "height": 3000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/IndianaDunes-001_6000.png",
+          "width": 6000,
+          "height": 4000
+        }
+      },
+
+      "createdAt": "2025-02-18",
+      "location": "Indiana Dunes National Park, United States",
+      "latitude": "41.64885N",
+      "longitude": "87.11178W",
+      
+
+      "tags": ["Indiana", "Dunes", "National Park","Snow", "Chicago", "Indiana Dunes National Park", "Lake Michigan", "Landscape Ratio"]
     }
   ]
 }

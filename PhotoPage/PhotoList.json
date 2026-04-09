@@ -477,7 +477,7 @@
       "longitude": "82.54276W",
       
 
-      "tags": ["Hocking Hills", "Cave", "Bridge", "Snow", "Landscape Ratio"]
+      "tags": ["Hocking Hills", "Cave", "Bridge", "Snow", "Portrait Ratio"]
     },
     {
       "id": "NRGBridge-001",
@@ -520,6 +520,90 @@
       
 
       "tags": ["New River Gorge", "Bridge", "Night", "New River Gorge Bridge","Landscape Ratio"]
+    },
+    {
+      "id": "HockingHills-001",
+      "title": "Log Steps Hocking Hills",
+      "description": "Snowy Steps past a red log up to a frozen waterfall in Hocking Hills",
+      "alt": "Log and snowy steps Hocking Hills",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/HockingHills-002_500.png",
+          "width": 500,
+          "height": 375
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/HockingHills-002_1000.png",
+          "width": 1000,
+          "height": 750
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/HockingHills-002_2000.png",
+          "width": 2000,
+          "height": 1500
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/HockingHills-002_4000.png",
+          "width": 4000,
+          "height": 3000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/HockingHills-002_6000.png",
+          "width": 6000,
+          "height": 4000
+        }
+      },
+
+      "createdAt": "2025-02-21",
+      "location": "Hocking Hills, United States",
+      "latitude": "39.43282N",
+      "longitude": "82.54276W",
+      
+
+      "tags": ["New River Gorge", "Bridge", "Night", "New River Gorge Bridge","Landscape Ratio"]
+    },
+    {
+      "id": "HockingHills-003",
+      "title": "Hocking Hills Snowy Bridge",
+      "description": "Scenic views of Hocking Hills overlooking a snowy bridge",
+      "alt": "Hocking Hills Snowy Bridge",
+
+      "sizes": {
+        "thumbnail": {
+          "url": "/PhotoPage/Photos/HockingHills-003_500.png",
+          "width": 375,
+          "height": 500
+        },
+        "small": {
+          "url": "/PhotoPage/Photos/HockingHills-003_1000.png",
+          "width": 750,
+          "height": 1000
+        },
+        "medium": {
+          "url": "/PhotoPage/Photos/HockingHills-003_2000.png",
+          "width": 1500,
+          "height": 2000
+        },
+        "large": {
+          "url": "/PhotoPage/Photos/HockingHills-003_4000.png",
+          "width": 3000,
+          "height": 4000
+        },
+        "extra-large": {
+          "url": "/PhotoPage/Photos/HockingHills-003_6000.png",
+          "width": 4000,
+          "height": 6000
+        }
+      },
+
+      "createdAt": "2025-02-21",
+      "location": "Hocking Hills, United States",
+      "latitude": "39.43282N",
+      "longitude": "82.54276W",
+      
+
+      "tags": ["Hocking Hills", "Bridge", "Snow", "Portrait Ratio"]
     }
   ]
 }

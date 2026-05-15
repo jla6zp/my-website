@@ -35,6 +35,12 @@ fetch("PhotoPage/PhotoList.json")
       img.loading = "lazy";
       img.classList.add("GalleryImage");
 
+      const fullSrc = photo.sizes.large?.url
+        || photo.sizes.medium?.url
+        || getDefaultSrc(photo.sizes);
+      img.dataset.fullSrc = fullSrc;
+      img.dataset.alt = photo.alt;
+
       gallery.appendChild(img);
     });
   })

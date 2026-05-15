@@ -5,6 +5,12 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="Home-Background">
+
+        <div id="loadingScreen">
+            <img class="LoadingLogo" src="Images/Filtered Logo.png" />
+            <div class="LoadingText">Loading...</div>
+        </div>
+
         <header>
             <div>
                 <h1>Not all those who wander are lost</h1>
@@ -46,5 +52,22 @@
                 <div class="image-overlay photos-bar-overlay"></div>
             </div>
         </div>
-    </body>    
+        <script>
+            (function () {
+                const screen = document.getElementById('loadingScreen');
+
+                function dismiss() {
+                    screen.classList.add('fade-out');
+                    screen.addEventListener('transitionend', () => screen.remove(), { once: true });
+                }
+
+                const img = new Image();
+                img.onload = dismiss;
+                img.onerror = dismiss;
+                img.src = 'Images/Iceland_Home.png';
+
+                if (img.complete) dismiss();
+            })();
+        </script>
+    </body>
 </html>

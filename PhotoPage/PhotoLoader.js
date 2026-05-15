@@ -22,7 +22,7 @@ fetch("PhotoPage/PhotoList.json")
       img.src = getDefaultSrc(photo.sizes);
       img.srcset = buildSrcSet(photo.sizes);
 
-      img.sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 300px";
+      img.sizes = "32vmin";
 
       img.alt = photo.alt;
 

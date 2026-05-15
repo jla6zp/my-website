@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
-html, body
-{
+
+html, body {
     min-height: 100vh;
     min-width: 100vw;
     margin: 0;
 }
 
-.PhotoList-Background
-{
+.PhotoList-Background {
     background-color: rgb(111, 143, 173);
     background-image: url("Images/photosBackground.png");
     background-size: cover;
@@ -16,8 +15,9 @@ html, body
     overflow: hidden;
 }
 
-.CornerLogo
-{
+/* ---- Corner Logo ---- */
+
+.CornerLogo {
     position: absolute;
     height: 200px;
     width: 200px;
@@ -26,11 +26,13 @@ html, body
     filter: brightness(0) saturate(100%) invert(91%) sepia(58%) saturate(4121%) hue-rotate(172deg) brightness(106%) contrast(97%);
 }
 
-.ContactWrapper
-{
+/* ---- Contact ---- */
+
+.ContactWrapper {
     position: absolute;
     top: 50px;
-    display: inline-flex; /*Inline-flex online as wide and tall as the children*/
+    left: 0;
+    display: inline-flex;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
@@ -38,69 +40,105 @@ html, body
     text-decoration: none;
 }
 
-.ContactLine
-{
+.ContactLine {
     height: 2px;
     width: 30px;
     background-color: #bee4fb;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
 }
 
-.ContactText
-{
+.ContactWrapper:hover .ContactLine {
+    width: 60px;
+}
+
+.ContactText {
     font-family: "Google Sans", sans-serif;
     font-size: 20px;
-    color:#bee4fb;
+    color: #bee4fb;
 }
 
-.MenuWrapper
-{
+/* ---- Menu ---- */
+
+.MenuContainer {
     position: absolute;
     top: 50px;
-    right: 0px;
-    display: inline-flex; /*Inline-flex online as wide and tall as the children*/
+    right: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 100;
+}
+
+.MenuWrapper {
+    display: inline-flex;
     justify-content: flex-end;
     align-items: center;
     cursor: pointer;
-    text-decoration: none;
     gap: 10px;
 }
 
-.MenuLineWrapper
-{
+.MenuLineWrapper {
     position: relative;
-    display: inline-flex; /*Inline-flex online as wide and tall as the children*/
-    flex-direction: column; /* Stacks children vertically */
-    justify-content: flex-start; /* Keeps them at the top */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
     gap: 2px;
 }
-.MenuLine
-{
+
+.MenuLine {
     height: 2px;
     width: 30px;
     background-color: #bee4fb;
 }
 
-.MenuText
-{
+.MenuText {
     font-family: "Google Sans", sans-serif;
     font-size: 20px;
-    color:#bee4fb; 
+    color: #bee4fb;
 }
+
+.MenuDropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: max-width 0.35s ease, opacity 0.3s ease;
+}
+
+.MenuDropdown.open {
+    max-width: 400px;
+    opacity: 1;
+}
+
+.MenuNavItem {
+    font-family: "Google Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #bee4fb;
+    text-decoration: none;
+    padding: 0 18px;
+    transition: color 0.2s ease;
+}
+
+.MenuNavItem:hover {
+    color: #ffffff;
+}
+
+/* ---- Gallery ---- */
 
 .Gallery {
     position: absolute;
     display: grid;
-
     grid-template-rows: repeat(3, 1fr);
     grid-auto-flow: column;
-
     gap: 5px;
-
     width: 75vw;
     height: 75vh;
-
     overflow: hidden;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -112,47 +150,105 @@ html, body
     object-fit: cover;
 }
 
-.ScrollControl {
+/* ---- Side Scroll Arrow Buttons ---- */
+
+.ScrollArrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 100px;
+    width: 70px;
+    height: 37.5vh;
+    border: 1.5px solid rgba(190, 228, 251, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     z-index: 10;
-    transition: opacity 0.2s ease;
-    opacity: 0.3;
+    transition: border-color 0.25s ease, background-color 0.25s ease, opacity 0.3s ease;
 }
 
-.ScrollControl:hover {
-    opacity: 0.7;
+.ScrollArrow:hover {
+    border-color: rgba(190, 228, 251, 0.6);
+    background-color: rgba(190, 228, 251, 0.04);
 }
 
-.ScrollControl::after {
-    content: '';
+/* Gallery left edge = 12.5vw, right edge = 87.5vw */
+.ScrollArrowLeft {
+    left: calc(12.5vw - 75px);
+}
+
+.ScrollArrowRight {
+    left: calc(87.5vw + 5px);
+}
+
+.ArrowTriangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0.55;
+    transition: opacity 0.25s ease;
+}
+
+.ScrollArrow:hover .ArrowTriangle {
+    opacity: 1;
+}
+
+.ArrowTriangleLeft {
+    border-width: 12px 18px 12px 0;
+    border-color: transparent #bee4fb transparent transparent;
+    margin-right: 4px;
+}
+
+.ArrowTriangleRight {
+    border-width: 12px 0 12px 18px;
+    border-color: transparent transparent transparent #bee4fb;
+    margin-left: 4px;
+}
+
+/* ---- Bottom Scroll Hints ---- */
+
+.ScrollHintLeft,
+.ScrollHintRight {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: solid #bee4fb;
-    border-width: 3px 3px 0 0;
-    width: 15px;
-    height: 15px;
+    top: calc(50% + 37.5vh + 12px);
+    font-family: "Google Sans", sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: rgba(190, 228, 251, 0.5);
+    cursor: default;
+    user-select: none;
+    transition: color 0.2s ease, opacity 0.3s ease;
 }
 
-.ScrollLeft {
-    left: 10px;
+.ScrollArrow.hidden,
+.ScrollHintLeft.hidden,
+.ScrollHintRight.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
-.ScrollLeft::after {
-    right: 15px;
-    transform: translateY(-50%) rotate(-135deg);
+.ScrollHintLeft:hover,
+.ScrollHintRight:hover {
+    color: rgba(190, 228, 251, 0.9);
 }
 
-.ScrollRight {
-    right: 10px;
+.ScrollHintLeft {
+    left: 12.5vw;
 }
 
-.ScrollRight::after {
-    left: 15px;
-    transform: translateY(-50%) rotate(45deg);
+.ScrollHintRight {
+    right: 12.5vw;
+}
+
+/* ---- Copyright ---- */
+
+.Copyright {
+    position: absolute;
+    bottom: 22px;
+    right: 28px;
+    font-family: "Google Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(190, 228, 251, 0.45);
+    pointer-events: none;
 }

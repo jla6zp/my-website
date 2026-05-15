@@ -5,22 +5,43 @@
         <link rel="stylesheet" href="PhotoList.css">
     </head>
     <body class="PhotoList-Background">
+
         <a class="ContactWrapper" href="Contact.html">
             <div class="ContactLine"></div>
             <div class="ContactText">Contact</div>
         </a>
-        <a class="MenuWrapper" href="index.html">
-            <div class="MenuText">Menu</div>
-            <div class="MenuLineWrapper">
-                <div class="MenuLine"></div>
-                <div class="MenuLine"></div>
-                <div class="MenuLine"></div>
+
+        <div class="MenuContainer" id="menuContainer">
+            <div class="MenuWrapper" id="menuToggle">
+                <div class="MenuText">Menu</div>
+                <div class="MenuLineWrapper">
+                    <div class="MenuLine"></div>
+                    <div class="MenuLine"></div>
+                    <div class="MenuLine"></div>
+                </div>
             </div>
-        </a>
-        <div class="Gallery"></div>
-        <div class="ScrollControl ScrollLeft" title="Scroll left"></div>
-        <div class="ScrollControl ScrollRight" title="Scroll right"></div>
+            <div class="MenuDropdown" id="menuDropdown">
+                <a href="index.html" class="MenuNavItem">Home</a>
+                <a href="Projects.html" class="MenuNavItem">Projects</a>
+                <a href="About.html" class="MenuNavItem">About</a>
+            </div>
+        </div>
+
+        <div class="Gallery" id="gallery"></div>
+
+        <div class="ScrollArrow ScrollArrowLeft" id="scrollLeft">
+            <div class="ArrowTriangle ArrowTriangleLeft"></div>
+        </div>
+        <div class="ScrollArrow ScrollArrowRight" id="scrollRight">
+            <div class="ArrowTriangle ArrowTriangleRight"></div>
+        </div>
+
+        <div class="ScrollHintLeft" id="hoverScrollLeft">&#8592;&#8212;&#8212; SCROLL</div>
+        <div class="ScrollHintRight" id="hoverScrollRight">SCROLL &#8212;&#8212;&#8594;</div>
+
         <img class="CornerLogo" src="Images/Filtered Logo.png" />
+        <div class="Copyright">&#169; Jared Arnold</div>
+
         <script src="PhotoPage/PhotoLoader.js"></script>
         <script src="script.js"></script>
     </body>

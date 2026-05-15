@@ -43,5 +43,11 @@ fetch("PhotoPage/PhotoList.json")
 
       gallery.appendChild(img);
     });
+
+    gallery.dispatchEvent(new CustomEvent('photosAppended'));
   })
-  .catch(err => console.error("Error loading images:", err));
+  .catch(err => {
+    console.error("Error loading images:", err);
+    const gallery = document.getElementById('gallery');
+    if (gallery) gallery.dispatchEvent(new CustomEvent('photosAppended'));
+  });

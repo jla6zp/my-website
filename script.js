@@ -1,4 +1,37 @@
 const gallery = document.getElementById('gallery');
+
+// ---- Loading Screen ----
+
+const loadingScreen = document.getElementById('loadingScreen');
+
+function dismissLoadingScreen() {
+    clearTimeout(safetyTimer);
+    loadingScreen.classList.add('fade-out');
+    loadingScreen.addEventListener('transitionend', () => loadingScreen.remove(), { once: true });
+}
+
+// Safety net: never block longer than 10s
+const safetyTimer = setTimeout(dismissLoadingScreen, 10000);
+
+gallery.addEventListener('photosAppended', () => {
+    const images = Array.from(gallery.querySelectorAll('.GalleryImage'));
+    // Only wait for images in initially visible columns
+    const visibleImages = images.filter(img => img.offsetLeft < gallery.clientWidth);
+
+    if (visibleImages.length === 0) { dismissLoadingScreen(); return; }
+
+    let pending = visibleImages.length;
+    function onSettled() { if (--pending === 0) dismissLoadingScreen(); }
+
+    visibleImages.forEach(img => {
+        if (img.complete && img.naturalWidth > 0) {
+            onSettled();
+        } else {
+            img.addEventListener('load',  onSettled, { once: true });
+            img.addEventListener('error', onSettled, { once: true });
+        }
+    });
+}, { once: true });
 const scrollLeftBtn = document.getElementById('scrollLeft');
 const scrollRightBtn = document.getElementById('scrollRight');
 const hoverScrollLeft = document.getElementById('hoverScrollLeft');

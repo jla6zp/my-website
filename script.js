@@ -145,10 +145,25 @@ lightboxPrev.classList.add('LightboxArrow', 'LightboxArrowLeft');
 const lightboxNext = document.createElement('div');
 lightboxNext.classList.add('LightboxArrow', 'LightboxArrowRight');
 
+const lightboxLoader = document.createElement('div');
+lightboxLoader.classList.add('LightboxLoader', 'hidden');
+
+const lightboxLoaderLogo = document.createElement('img');
+lightboxLoaderLogo.classList.add('LightboxLoaderLogo');
+lightboxLoaderLogo.src = 'Images/Filtered Logo.png';
+
+const lightboxLoaderText = document.createElement('div');
+lightboxLoaderText.classList.add('LightboxLoaderText');
+lightboxLoaderText.textContent = 'Loading...';
+
+lightboxLoader.appendChild(lightboxLoaderLogo);
+lightboxLoader.appendChild(lightboxLoaderText);
+
 lightbox.appendChild(lightboxImg);
 lightbox.appendChild(lightboxClose);
 lightbox.appendChild(lightboxPrev);
 lightbox.appendChild(lightboxNext);
+lightbox.appendChild(lightboxLoader);
 document.body.appendChild(lightbox);
 
 let currentIndex = 0;
@@ -171,13 +186,16 @@ function openLightbox(src, alt, index) {
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
     updateArrows(getGalleryImages());
+    lightboxLoader.classList.remove('hidden');
 
     const preload = new Image();
     preload.onload = () => {
+        lightboxLoader.classList.add('hidden');
         lightboxImg.src = src;
         lightboxImg.style.transition = '';
         lightboxImg.style.opacity = '1';
     };
+    preload.onerror = () => lightboxLoader.classList.add('hidden');
     preload.src = src;
 }
 
@@ -191,6 +209,7 @@ function navigateLightbox(delta) {
 
 function closeLightbox() {
     lightbox.classList.remove('open');
+    lightboxLoader.classList.add('hidden');
     document.body.style.overflow = '';
 }
 

@@ -1,73 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Jared Arnold Photography</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <title>Jared Arnold</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #020709;
+        }
+
+        /* ---- Aurora Canvas ---- */
+        #auroraCanvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* ---- Page layout ---- */
+        .Page {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ---- Name / Title ---- */
+        .Title {
+            font-family: "Berkshire Swash", serif;
+            font-size: clamp(3rem, 7vw, 6.5rem);
+            color: #bee4fb;
+            letter-spacing: 0.06em;
+            text-align: center;
+            text-shadow:
+                0 0 40px  rgba(190, 228, 251, 0.5),
+                0 0 100px rgba(34,  211, 238,  0.25),
+                0 0 200px rgba(13,  148, 136,  0.15);
+            margin: 0 0 16px 0;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeUp 1.1s ease 0.2s forwards;
+        }
+
+        .Subtitle {
+            font-family: "Google Sans", sans-serif;
+            font-size: clamp(0.65rem, 1.4vw, 0.85rem);
+            letter-spacing: 0.45em;
+            color: rgba(190, 228, 251, 0.45);
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 0 72px 0;
+            opacity: 0;
+            animation: fadeUp 1.1s ease 0.5s forwards;
+        }
+
+        /* ---- Divider ---- */
+        .Divider {
+            width: clamp(200px, 30vw, 360px);
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(190,228,251,0.2), transparent);
+            margin-bottom: 64px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.7s forwards;
+        }
+
+        /* ---- Nav Items ---- */
+        .NavRow {
+            display: flex;
+            align-items: flex-start;
+            gap: clamp(40px, 8vw, 120px);
+            opacity: 0;
+            animation: fadeUp 1.1s ease 0.85s forwards;
+        }
+
+        .NavItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .NavItem-Name {
+            font-family: "Berkshire Swash", serif;
+            font-size: clamp(1.6rem, 3.5vw, 3rem);
+            color: rgba(190, 228, 251, 0.85);
+            letter-spacing: 0.03em;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        /* Animated underline */
+        .NavItem-Line {
+            width: 30px;
+            height: 1.5px;
+            background: rgba(190, 228, 251, 0.35);
+            transition: width 0.35s ease, background 0.3s ease;
+        }
+
+        .NavItem-Desc {
+            font-family: "Google Sans", sans-serif;
+            font-size: clamp(0.65rem, 1.1vw, 0.78rem);
+            letter-spacing: 0.15em;
+            color: rgba(190, 228, 251, 0);
+            text-transform: uppercase;
+            text-align: center;
+            max-width: 140px;
+            line-height: 1.7;
+            transition: color 0.35s ease;
+        }
+
+        /* Hover states */
+        .NavItem:hover .NavItem-Name {
+            color: #ffffff;
+            text-shadow:
+                0 0 30px rgba(190, 228, 251, 0.5),
+                0 0 70px rgba(34, 211, 238, 0.2);
+        }
+
+        .NavItem:hover .NavItem-Line {
+            width: 70px;
+            background: rgba(190, 228, 251, 0.7);
+        }
+
+        .NavItem:hover .NavItem-Desc {
+            color: rgba(190, 228, 251, 0.45);
+        }
+
+        /* Vertical separator between nav items */
+        .NavSep {
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, rgba(190,228,251,0.15), transparent);
+            align-self: center;
+            flex-shrink: 0;
+        }
+
+        /* ---- Animations ---- */
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* ---- Copyright ---- */
+        .Copyright {
+            position: fixed;
+            bottom: 22px;
+            right: 28px;
+            font-family: "Google Sans", sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: rgba(190, 228, 251, 0.3);
+            pointer-events: none;
+        }
+        </style>
     </head>
-    <body class="Home-Background">
+    <body>
 
-        <div id="loadingScreen">
-            <img class="LoadingLogo" src="Images/Filtered Logo.png" />
-            <div class="LoadingText">Loading...</div>
+        <canvas id="auroraCanvas"></canvas>
+
+        <div class="Page">
+            <div class="Title">Jared Arnold</div>
+            <div class="Subtitle">Photographer &nbsp;&middot;&nbsp; Software Developer &nbsp;&middot;&nbsp; Climber</div>
+
+            <div class="Divider"></div>
+
+            <nav class="NavRow">
+                <a class="NavItem" href="Projects.html">
+                    <div class="NavItem-Name">Portfolio</div>
+                    <div class="NavItem-Line"></div>
+                    <div class="NavItem-Desc">Software &amp; creative builds</div>
+                </a>
+
+                <div class="NavSep"></div>
+
+                <a class="NavItem" href="About.html">
+                    <div class="NavItem-Name">About</div>
+                    <div class="NavItem-Line"></div>
+                    <div class="NavItem-Desc">Developer, climber, explorer</div>
+                </a>
+
+                <div class="NavSep"></div>
+
+                <a class="NavItem" href="PhotoList.html">
+                    <div class="NavItem-Name">Photos</div>
+                    <div class="NavItem-Line"></div>
+                    <div class="NavItem-Desc">Landscape &amp; travel photography</div>
+                </a>
+            </nav>
         </div>
 
-        <header>
-            <div>
-                <h1>Not all those who wander are lost</h1>
-                <p>-J.R.R. Tolkien</p>
-            </div>
-        </header>
-        <div class="panel-layout">
-            
-            <div class="panel">
-                <div class="projects-bar">
-                    <div class="horizontal-line"></div>
-                    <a class="menu-text" href="Projects.html">PROJECTS</a>
-                </div>
-                <div class="backdrop-overlay left-backdrop">
-                    <video class="waterSim" autoplay muted loop playsinline>
-                        <source src="Videos/WaterSim.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="image-overlay projects-bar-overlay"></div>
-            </div>
-            
-            <div class="panel centered">
-                <div class="about-area">
-                    <a class="menu-text pointer sibling-hover" href="About.html">ABOUT</a>
-                    <div class="vertical-container pointer sibling-hover">
-                        <div class="vertical-line"></div>
-                    </div>
-                </div>
-                <div class="backdrop-overlay center-backdrop"></div>
-                <div class="image-overlay about-area-overlay"></div>
-            </div>
-            
-            <div class="panel">
-                <div class="photos-bar">
-                    <a class="menu-text" href="PhotoList.html">PHOTOS</a>
-                    <div class="horizontal-line"></div>
-                </div>
-                <div class="backdrop-overlay right-backdrop"></div>
-                <div class="image-overlay photos-bar-overlay"></div>
-            </div>
-        </div>
+        <div class="Copyright">&#169; Jared Arnold</div>
+
         <script>
-            (function () {
-                const screen = document.getElementById('loadingScreen');
+        const canvas = document.getElementById('auroraCanvas');
+        const ctx    = canvas.getContext('2d');
 
-                function dismiss() {
-                    screen.classList.add('fade-out');
-                    screen.addEventListener('transitionend', () => screen.remove(), { once: true });
-                }
+        let stars = [];
+        function initStars() {
+            stars = Array.from({ length: 200 }, () => ({
+                x:       Math.random(),
+                y:       Math.random() * 0.75,
+                r:       Math.random() * 1.0 + 0.25,
+                opacity: Math.random() * 0.55 + 0.15,
+                phase:   Math.random() * Math.PI * 2,
+                speed:   Math.random() * 1.8 + 0.4,
+            }));
+        }
 
-                const img = new Image();
-                img.onload = dismiss;
-                img.onerror = dismiss;
-                img.src = 'Images/Iceland_Home.png';
+        const BANDS = [
+            { rgb: [34,  211, 238], base: 0.42, amp: 0.060, freq: 1.9, spd: 0.28, spread: 0.095, opacity: 0.80, phase: 0.00 },
+            { rgb: [13,  148, 136], base: 0.50, amp: 0.078, freq: 2.5, spd: 0.18, spread: 0.110, opacity: 0.65, phase: 1.10 },
+            { rgb: [52,  211, 153], base: 0.36, amp: 0.048, freq: 3.3, spd: 0.44, spread: 0.068, opacity: 0.55, phase: 2.30 },
+            { rgb: [129, 140, 248], base: 0.56, amp: 0.072, freq: 1.4, spd: 0.13, spread: 0.125, opacity: 0.42, phase: 0.70 },
+            { rgb: [190, 228, 251], base: 0.46, amp: 0.040, freq: 3.0, spd: 0.53, spread: 0.055, opacity: 0.45, phase: 3.80 },
+            { rgb: [96,  165, 250], base: 0.52, amp: 0.085, freq: 1.2, spd: 0.10, spread: 0.140, opacity: 0.35, phase: 5.10 },
+        ];
 
-                if (img.complete) dismiss();
-            })();
+        function getY(t, H, band, time) {
+            return H * band.base
+                + Math.sin(t * Math.PI * 2 * band.freq        + time * band.spd        + band.phase      ) * H * band.amp
+                + Math.sin(t * Math.PI * 2 * band.freq * 0.73 + time * band.spd * 1.37 + band.phase + 1.3) * H * band.amp * 0.38
+                + Math.sin(t * Math.PI * 2 * band.freq * 1.57 + time * band.spd * 0.82 + band.phase + 2.6) * H * band.amp * 0.18;
+        }
+
+        function drawBand(W, H, band, time) {
+            const [r, g, b] = band.rgb;
+            const spread = band.spread * H;
+            const N = 100;
+            const pts = [];
+            for (let i = 0; i <= N; i++) {
+                const t = i / N;
+                pts.push([t * W, getY(t, H, band, time)]);
+            }
+            const passes = [
+                { w: spread * 3.0, a: band.opacity * 0.10 },
+                { w: spread * 1.5, a: band.opacity * 0.35 },
+                { w: spread * 0.5, a: band.opacity * 0.90 },
+            ];
+            ctx.save();
+            ctx.globalCompositeOperation = 'screen';
+            ctx.filter  = `blur(${Math.round(spread * 0.55)}px)`;
+            ctx.lineCap = 'round';
+            for (const pass of passes) {
+                ctx.beginPath();
+                ctx.moveTo(pts[0][0], pts[0][1]);
+                for (let i = 1; i <= N; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+                ctx.strokeStyle = `rgba(${r},${g},${b},${pass.a.toFixed(3)})`;
+                ctx.lineWidth   = pass.w;
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
+
+        function drawStars(W, H, time) {
+            ctx.save();
+            ctx.globalCompositeOperation = 'screen';
+            for (const s of stars) {
+                const alpha = s.opacity * (0.6 + 0.4 * Math.sin(time * s.speed + s.phase));
+                ctx.fillStyle = `rgba(190,228,251,${alpha.toFixed(3)})`;
+                ctx.beginPath();
+                ctx.arc(s.x * W, s.y * H, s.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            ctx.restore();
+        }
+
+        function resize() {
+            canvas.width  = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        const FRAME_MS = 1000 / 30;
+        let lastFrame  = 0;
+
+        function render(timestamp) {
+            requestAnimationFrame(render);
+            const elapsed = timestamp - lastFrame;
+            if (elapsed < FRAME_MS) return;
+            lastFrame = timestamp - (elapsed % FRAME_MS);
+
+            const W = canvas.width, H = canvas.height;
+            const bg = ctx.createLinearGradient(0, 0, 0, H);
+            bg.addColorStop(0,   '#020709');
+            bg.addColorStop(0.5, '#050d16');
+            bg.addColorStop(1,   '#09151f');
+            ctx.fillStyle = bg;
+            ctx.fillRect(0, 0, W, H);
+
+            drawStars(W, H, timestamp * 0.001);
+            for (const band of BANDS) drawBand(W, H, band, timestamp * 0.001);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        initStars();
+        requestAnimationFrame(render);
         </script>
+
     </body>
 </html>

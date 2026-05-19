@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #03080f;
+    overflow-x: hidden;
+}
+
+/* ---- Contact ---- */
+
+.ContactWrapper {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 200;
+}
+
+.ContactLine {
+    height: 2px;
+    width: 30px;
+    background-color: #bee4fb;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
+}
+
+.ContactWrapper:hover .ContactLine {
+    width: 60px;
+}
+
+.ContactText {
+    font-family: "Google Sans", sans-serif;
+    font-size: 20px;
+    color: #bee4fb;
+}
+
+/* ---- Menu ---- */
+
+.MenuContainer {
+    position: fixed;
+    top: 50px;
+    right: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 200;
+}
+
+.MenuWrapper {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.MenuLineWrapper {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+}
+
+.MenuLine {
+    height: 2px;
+    width: 30px;
+    background-color: #bee4fb;
+}
+
+.MenuText {
+    font-family: "Google Sans", sans-serif;
+    font-size: 20px;
+    color: #bee4fb;
+}
+
+.MenuDropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: max-width 0.35s ease, opacity 0.3s ease;
+}
+
+.MenuDropdown.open {
+    max-width: 400px;
+    opacity: 1;
+}
+
+.MenuNavItem {
+    font-family: "Google Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #bee4fb;
+    text-decoration: none;
+    padding: 0 18px;
+    transition: color 0.2s ease;
+}
+
+.MenuNavItem:hover {
+    color: #ffffff;
+}
+
+/* ---- Aurora Hero ---- */
+
+.AuroraHero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#auroraCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.AuroraOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.AuroraName {
+    font-family: "Berkshire Swash", serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    color: #bee4fb;
+    letter-spacing: 0.06em;
+    text-shadow:
+        0 0 40px  rgba(190, 228, 251, 0.5),
+        0 0 100px rgba(34,  211, 238,  0.25),
+        0 0 200px rgba(13,  148, 136,  0.15);
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 1.2s ease 0.3s forwards;
+}
+
+.AuroraSub {
+    font-family: "Google Sans", sans-serif;
+    font-size: clamp(0.7rem, 1.6vw, 0.95rem);
+    letter-spacing: 0.4em;
+    color: rgba(190, 228, 251, 0.5);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeUp 1.2s ease 0.7s forwards;
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Scroll Hint ---- */
+
+.ScrollHint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.4s forwards;
+}
+
+.ScrollHintLine {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(190,228,251,0.5), transparent);
+}
+
+.ScrollHintText {
+    font-family: "Google Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: rgba(190, 228, 251, 0.4);
+    text-transform: uppercase;
+}
+
+/* ---- Bio Sections ---- */
+
+.BioSection {
+    display: flex;
+    align-items: center;
+    gap: clamp(40px, 6vw, 100px);
+    padding: clamp(60px, 8vw, 120px) clamp(40px, 10vw, 160px);
+    background: #091520;
+    border-top: 1px solid rgba(190, 228, 251, 0.07);
+}
+
+.BioSection--reverse {
+    flex-direction: row-reverse;
+    background: #06111a;
+}
+
+/* Image side */
+.BioImage {
+    flex: 0 0 auto;
+    width: clamp(220px, 28vw, 400px);
+}
+
+.BioImage img {
+    width: 100%;
+    height: clamp(300px, 40vw, 520px);
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: brightness(0.92) contrast(1.05);
+    transition: filter 0.4s ease;
+}
+
+.BioImage img:hover {
+    filter: brightness(1) contrast(1.05);
+}
+
+/* Text side */
+.BioText {
+    flex: 1;
+    max-width: 560px;
+}
+
+.BioLabel {
+    font-family: "Google Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(34, 211, 238, 0.7);
+    margin-bottom: 16px;
+}
+
+.BioHeading {
+    font-family: "Berkshire Swash", serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    color: #bee4fb;
+    margin: 0 0 24px 0;
+    line-height: 1.3;
+    font-weight: normal;
+}
+
+.BioText p {
+    font-family: "Google Sans", sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    line-height: 1.95;
+    color: rgba(190, 228, 251, 0.6);
+    margin: 0 0 18px 0;
+}
+
+.BioText p strong {
+    color: rgba(190, 228, 251, 0.88);
+    font-weight: 500;
+}
+
+/* Skill pills */
+.SkillPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.SkillPills span {
+    font-family: "Google Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: rgba(34, 211, 238, 0.8);
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    padding: 6px 16px;
+    text-transform: uppercase;
+}
+
+/* Country list */
+.CountryList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.CountryList span {
+    font-family: "Google Sans", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: rgba(190, 228, 251, 0.65);
+    border: 1px solid rgba(190, 228, 251, 0.15);
+    padding: 6px 16px;
+}
+
+/* ---- Footer ---- */
+
+.AboutFooter {
+    background: #06111a;
+    border-top: 1px solid rgba(190, 228, 251, 0.07);
+    padding: 32px clamp(40px, 10vw, 160px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Copyright {
+    font-family: "Google Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(190, 228, 251, 0.3);
+}
